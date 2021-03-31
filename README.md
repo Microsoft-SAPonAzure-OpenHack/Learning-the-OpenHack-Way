@@ -21,7 +21,7 @@ Note: VMs must be deallocated for Azure charges to stop and that's facilitated b
 This is ready, flexible, end-to-end solution (including Azure automation runtime environment, scripts, and runbooks, tagging process etc.) that enables:
 
 - Start & Stop of your SAP application servers, central services, database, and corrosponding VMs
-- Optionally Convert Premium Managed Disks to Standard during the stop procedure, and back to Premium during the start procedure; thus saving cost on storage as well  
+- Optionally convert Premium Managed Disks to Standard during the stop procedure, and back to Premium during the start procedure, thus saving cost storage as well  
 
 SAP systems start and stop is done gracefully (using SAP native commands), allowing SAP users and batch jobs to finish (with timeout) minimizing downtime impact.  
 
