@@ -1,8 +1,8 @@
 # Overview 
 
-The goal of this solution is to facilitate a controlled shutdown/startup
-of SAP on Azure systems, which is a common request from customers who
-want to save costs by shutting down environments that are not in use.
+The goal of this solution is to facilitate a controlled shutdown & startup of SAP systems, which is a common mechanism to save costs for non Reserved Instances in Azure. 
+
+Note: VMs must be deallocated for Azure charges to stop and that's facilitated by scripts
 
 This is ready, flexible, end-to-end solution (including PaaS Azure automation runtime environment, scripts, and runbooks, tagging process etc.) that enables you automatically.
 - Start / Stop of your SAP systems DBMS, and VMs:
