@@ -1,102 +1,3 @@
-# Overview 
-
-The goal of this solution is to facilitate a controlled shutdown & startup of SAP systems, which is a common mechanism to save costs for non Reserved Instances in Azure. 
-
-Note: VMs must be deallocated for Azure charges to stop and that's facilitated by scripts
-
-This is ready, flexible, end-to-end solution (including PaaS Azure automation runtime environment, scripts, and runbooks, tagging process etc.) that enables you automatically.
-- Start / Stop of your SAP systems DBMS, and VMs:
-- SAP application servers
-- If you use managed disks (Premium and Standard), you can decide to convert them to Standard during the stop procedure, and to Premium during the start procedure.
-
-In this way, **cost saving** is achieved both on the **compute** as well as on the **storage** side! 
-
-SAP systems stop and SAP application servers stop is specially cared for in a graceful way, allowing SAP users and batch jobs to finish. In this way you can minimize SAP system or SAP application server’s downtime impact. Similar is done on DBMS side. 
-
-To further enhance user experience, you can consume this functionality using a **SAP Azure Power App**. For more information you can check a great blog - Hey, SAP Systems! My PowerApp says Snooze! But only if you’re done yet.
-
-This solution is product of joint work of **SAP on Azure CAT Team (Cloud Advisory Team)** and **SAP on Azure FastTrack Team**.
-
-
-# Solution Capabilities
-
-In details, with this solution you can do the following:
-
-- **Start / Stop of complete SAP NetWeaver Central System** on **Linux** or **Windows**, and **VM**.
-  
-    Typical scenario here is non prod SAP systems
-
-- **Start / Stop of complete SAP NetWeaver Distributed System** on **Linux** or **Windows** and VMs.
-
-    Typical scenario here is non prod SAP systems.
-
-    Here you have:
-    -	One DBMS VM (HA is currently not implemented)
-    - One ASCS/SCS or DVEBMGS VM (HA is currently not implemented)
-    -	One or more SAP application servers
-    -	It is assumed that SAPMNT file share is located on SAP ASCS or DVEBMGS VM.
-
-
--	In a distributed SAP landscape, you can deploy your SAP instances across multiple VMs, and those VMs can be placed in different Azure resources groups.
-
-  -	In a distributed SAP landscape, SAP application instances (application server and SAP ASCS/SCS insatnce) can be on Windows and DBMS on Linux (this is so caller **heterogenous landscape**), for DBMS that support such scenario for example SAP HANA, Oracle, IBM DB2, SAP Sybase and SAP MaxDB.
-
-- On DBMS side, starting, stopping, getting status of DBMS itself is implemented for: 
-  - **SAP HANA DB**
-  -	**Microsoft SQL Server DB**
-
-- Currently, starting, stopping, getting status of DBMS is **NOT** implemented for **Oracle**, **IBM DB2**, **Sybase** and **MaxDB DBMSs**. 
-
-   Still, you can use the solution with these DBMSs.
-   During the startup procedure, solution is relying on automatic DB start during the VM start (on Windows), and SAP system start will also automatically trigger DBMS start. Although we did not test this, expectation is that this approach will work.
-
-- **Start / Stop Standalone HANA system and VM**
-
-- **Start / Stop SAP Application Server(s) and VM(s)**
-
-   This functionality can be used for SAP application servers scale out -scale in process.   
-
-   One meaningful scenario is for productive SAP systems, can be that you as an SAP system admin identify SAP system peaks (for example Black Friday or end year closure), where you know in advance how much of SAPS / application server you would need and at that time, and for how long. Then you can either schedule start / stop or execute by a user of certain numbers of already prepared SAP application servers, that will cover the load peak. 
-
--	**Converting the disks from Premium to Standard managed disks** during the stop process, and other way around during the start process to **reduce the costs**.
-
--	Starting / Stopping is possible to executed manually by a user, or it can be scheduled.
-
-  ![](Pictures/media/image76.png)
-
-
-
-# Soft / Graceful Shutdown of SAP System, Application Servers, and DBMS 
-
-## SAP System and SAP Application Servers
-
-The stopping of the SAP system or SAP application server will be done using an [SAP soft shutdown or graceful shutdown procedure](https://help.sap.com/saphelp_aii710/helpdata/en/f7/cb8577bc244a25a994fc3f9c16ce66/frameset.htm), within specified timeout. SAP soft shutdown, and is gracefully handling SAP process, users etc. in a specified downtime time, during the stop of whole SAP system or one SAP application server. 
-
- ![](Pictures/media/image2.png)  
-
- Users will get a popup to log off, SAP application server(s) will be removed from different logon groups (users, batch RFC etc.), procedure will wait for SAP batch job to be finished (until a specified timeout is reached). This is functionality implemented in the SAP kernel.
-
-![](Pictures/media/image3.png)  
-
-> [!NOTE]
-> You can specify in the user interface the SAP soft shutdown time. Default value is 300 sec.  
->![](Pictures/media/image4.png)
-
-
-## DBMS Shutdown
-
-For SAP HANA and SQL Server, it is also implemented DB soft shutdown, which will gracefully stop these DBMS, so DB will have time to flush consistently all content from memory to storage and stop all DB process. 
-
-## User Interface Possibilities
-
-A user can trigger start / stop in two ways:
-
-- using Azure Automation account portal UI
-
-- or even better is to use a fancy SAP Azure Power App, which can be consumed in a browser,  smart phones or Teams:
-  >![](Pictures/media/image77.png)
-
-
 # Architecture
 
 The solution is using Azure automation account PaaS solution as an automation platform to execute the SAP shutdown/startup jobs.
@@ -119,83 +20,16 @@ SQL Server start / stop / monitoring is implemented using scripts (calling SAP H
 Every Azure runbook can be executed either manually or it can be scheduled. 
 
 
-# Cost Optimization Potential 
-
-## Cost Savings on Compute for non-Productive SAP Systems
-
-The non-prod SAP systems, like dev test, demo, training etc., typically do not run 24/7. Let assume you would run them 8 hours per day during the Monday to Friday. This means you run and pay for each VM 8 hours x 5 days = 40 hours. The rest of the time of 128 hours in a week you do not  pay, which makes approximal **76 % of savings on compute**! 
-
-## Cost Savings on Compute for Productive SAP Systems 
-
-Productive SAP system run typical 24 / 7 and you never completely shut them down.  Still, there is a huge potential in saving on SAP application layer. SAP application layers takes a biggest amount of SAPS portion in total SAP system SAPS. 
-
-
-> [!NOTE]
-> **SAP Application Performance Standard** (**SAPS**) is a hardware-independent unit of measurement that describes the performance of a system configuration in the SAP environment. It is derived from the Sales and Distribution (SD) benchmark, where 100 SAPS is defined as 2,000 fully business processed order line items per hour. **SAPS is an SAP measure of compute process power**. 
-
-In an on-premises environment, SAP system is oversized so that it can stand the required peaks. But the reality is, those peaks are rear (maybe few days in 3 month). Most of the time such systems are underutilized. We’ve seen prod SAp systems that have 5 – 10 % of total CPU utilization most of the time. 
-
-In cloud we have possibility to run only what we need, and pay for what we used – hence, **SAP application servers’ layer is a perfect candidate to bring down the costs of SAP productive systems**! 
-
-Here, this solution offers ready jobs to start / stop an SAP application server and VMs. And it is doing in a soft shut down graceful manner, giving SAP users and process enough time to finish it. 
-
-## Cost Savings on Storage 
-
-If you would use Premium and Standard storage, there is possibility to convert such managed storage to premium and back to standard. 
-
-Let’s say you need to use Premium storage (especially for DBMS layer) to get a good SAP performance during the runtime. But once the SAP system (and VMs) is stopped, if you choose to convert the disks from Premium to Standard disks, you will pay much less on the storage during stop time. 
-
-During the start procedure, you can decide to convert the disks back to premium, have good performance of SAP systems during the runtime, and pay a higher storage Premium price only during the runtime. 
-In example where SAP system would run 8 hours x 5 days = 40 hours, and SAP system is stopped for 128 hours in a week, during this stopped time of 128 / week, you will pay not the price of Premium storage but reduced priced of Standard. 
-For example, price of 1 TB P30 disk approximately 2 times higher than 1 TB S30 Standard HDD disk. For above mentioned scenario, savings on 1 TB managed disk would be approximately **54 %**! 
-For the exact pricing for managed disks, check [here](https://azure.microsoft.com/en-us/pricing/details/managed-disks/). 
-
-## Cost of Azure Automation Account PaaS Service
-
-Cost if using Azure automaton service is extremely low.   Billing for jobs is based on the number of job run time minutes used in the month and for watchers is based on the number of hours used in a month. Charges for process automation are incurred whenever a job or watcher runs. You will be billed only for minutes/hours that exceed the free included units (**500 min for free**). If you exceed monthly free limit of 500 min, you will pay **per minute €0.002/minute**.
-
-Let’s say one SAP system start or stop takes on average 15 minutes. And let’s assume you scheduled your SAP system to start every morning from Monday to Friday and stop in the evening as well. That will be 10 executions per week, and 40 per month for one SAP system. 
-This means that in 500 free minutes you can execute 33 start or stop procedures for free. 
-
-Everything extra you need to pay. For one start or stop (of 15 min), you would pay 15 min * €0.002 = €0.03. And for **40 start / stop** of ONE SAP system you would pay **€ 1.2 per month**! 
-
-For updated and exact information on cost, you can check [here](https://azure.microsoft.com/en-us/pricing/details/automation/).
-
-## Solution Cost of Azure Automation Account Management 
-
-Often, when you use some solution which offer you some functionality, you need to manage it as well, learn it etc. All this generate additional costs, which can be quite high.  
-
-As Azure automation account is an PaaS service, you have here **ZERO management costs**! 
-
-Plus, it is easy to set it up and use it. 
-
-
 
 # Implementation
 
-## Create Azure Automation Account
+**Create Azure Automation Account**
 
 First, [create an Azure Automation account](https://docs.microsoft.com/en-us/azure/automation/automation-quickstart-create-account).
 
-**Create Resources** -\> search for **Automation**
 
-![](Pictures/media/image6.png)
 
-![](Pictures/media/image7.png)
-
-Click **Create**.
-
-![](Pictures/media/image8.png)
-
-Specify parameters:
-
-![](Pictures/media/image9.png)
-
-Azure Automation Account is created.
-
-![](Pictures/media/image10.png)
-
-## Import Az.Modules
+**Import Az.Modules**
 
 SAP start / stop PowerShell (PS) runbooks use new Az PS module, which must be [imported](https://docs.microsoft.com/en-us/azure/automation/az-modules#import-the-az-modules) .
 
@@ -209,119 +43,17 @@ Import Az modules:
 
   - **Az.Resources**
 
-## Az.Account
-
-Go to ***Module*** -\> ***Browse Gallery***
-
-Search for **Az.Account** module.
-
-![](Pictures/media/image11.png)
-
-Select **Az.Account** module and click **Import:**
-
-![](Pictures/media/image12.png)
-
-Import is in progress..
-
-![](Pictures/media/image13.png)
-
-Import is finished:
-
-![](Pictures/media/image14.png)
-
-## Import Az.Compute
-
-Go to ***Module*** -\> ***Browse Gallery***
-
-Search for **Az.Compute**
-
-![](Pictures/media/image15.png)
-
-Select **Az.Compute** module and click **Import:**
-
-Import in progress…
-
-![](Pictures/media/image16.png)
-
-Import is finished.
-
-![](Pictures/media/image17.png)
-
-## Import Az.Automation
-
-Go to ***Module*** -\> ***Browse Gallery***
-
-Search for **Az.Automation** module.
-
-![](Pictures/media/image18.png)
-
-Select **Az.Automation** module and click **Import:  
-**
-
-![](Pictures/media/image19.png)
-
-Import is in progress…
-
-![](Pictures/media/image20.png)
-
-Import is finished.
-
-![](Pictures/media/image21.png)
 
 
-## Az.Resources
-
-Go to ***Module*** -\> ***Browse Gallery***
-
-Search for **Az.Resources** module.
-
-![](Pictures/media/image22.png)
-
-Select **Az.Resources** module and click **Import:**
-
-![](Pictures/media/image23.png)
-
-Import is in progress…
-
-![](Pictures/media/image24.png)
-
-Import is finished.
-
-![](Pictures/media/image25.png)
-
-ALL new modules are imported.
-
-![A screenshot of a cell phone Description automatically
-generated](Pictures/media/image26.png)
-
-## Import SAP PowerShell Module
+**Import SAP PowerShell Module**
 
 Import **SAPAzurePowerShellModules** PowerShell module that will be used by SAP Runbooks.
 
 > [!NOTE]
 > PowerShell module **SAPAzurePowerShellModules** is stored in PowerShell Gallery and is easy to import into Azure automation account.
 
-Go to ***Module*** -\> ***Browse Gallery***
 
-Search for ***SAPAzurePowerShellModules*** module.
-
-![](Pictures/media/image27.png)
-
-Select ***SAPAzurePowerShellModules*** module and click **Import** and **OK:**
-
-![](Pictures/media/image28.png)
-
-![](Pictures/media/image29.png)
-
-Import is in progress…
-
-![](Pictures/media/image30.png)
-
-Import is finished.
-
-![](Pictures/media/image31.png)
-
-# Import SAP Runbook
+**Import SAP Runbooks**
 
 Navigate to **Runbook** and click **Import a runbook**.
 
