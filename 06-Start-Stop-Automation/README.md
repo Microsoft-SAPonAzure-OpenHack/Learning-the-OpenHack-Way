@@ -43,7 +43,7 @@ Import Az modules:
 
   - **Az.Resources**
 
-
+<br>
 
 **Import SAP PowerShell Module**
 
@@ -75,92 +75,23 @@ Import these runbooks:
 
   - Stop-SAPApplicationServer
 
-  - Tag-SAPCentralSystemHANA
-
-  - Tag-SAPCentralSystemSQLServer
-
   - Tag-SAPSystemASCSInstanceLinux
-
-  - Tag-SAPSystemASCSInstanceWindows
 
   - Tag-SAPSystemDialogInstanceLinux
 
-  - Tag-SAPSystemDialogInstanceWindows
-
   - Tag-SAPSystemDVEBMGSInstanceLinux
-
-  - Tag-SAPSystemDVEBMGSInstanceWindows
 
   - Tag-SAPSystemSCSInstanceLinux
 
-  - Tag-SAPSystemSCSInstanceWindows
-
   - Tag-SAPSystemJavaApplicationServerInstanceLinux
-
-  - Tag-SAPSystemJavaApplicationServerInstanceWindows
 
   - Tag-SAPSystemStandaloneHANA
 
-  - Tag-SAPStandaloneSQLServer
-
-  -
 > [!NOTE] 
 > All SAP runbooks are stored in PowerShell Gallery and are easy to import into Azure automation account.
 
-Go to **Runbooks** **Gallery**
 
-For **Source** choose: **PowerShell Gallery**
-
-![Graphical user interface, text, application Description automatically
-generated](Pictures/media/image35.png)
-
-In the search field type: **Start-SAPSystem** and press Enter.
-
-![Graphical user interface, text, application Description automatically
-generated](Pictures/media/image36.png)
-
-Click on **Start-SAPSystem** Runbook and click on **Import**.
-
-![Graphical user interface, text, application, email Description
-automatically generated](Pictures/media/image37.png)
-
-Click **OK**.
-
-![](Pictures/media/image38.png)
-
-Import succeeded:
-
-![Graphical user interface, text, application, email Description
-automatically generated](Pictures/media/image39.png)
-
-Go to **Runbooks** and click on **Start-SAPSystem** runbook.
-
-![Graphical user interface, text, application, email Description
-automatically generated](Pictures/media/image40.png)
-
-Click on **Edit**.
-
-![Graphical user interface, application Description automatically
-generated](Pictures/media/image41.png)
-
-Click **Publish** **and confirm** .
-
-![Graphical user interface, text, application, email Description
-automatically generated](Pictures/media/image42.png)
-
-And confirm it.
-
-![](Pictures/media/image43.png)
-
-Now **Start-SAPSystem** runbook is now published and ready to be used.
-
-Import in the same way for all other runbooks.
-
-All runbooks are imported.
-
-![](Pictures/media/image50.png)
-
-# Tagging Approach
+**Tagging Approach**
 
 In your SAP  landscape you have:
 
