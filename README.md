@@ -1,6 +1,6 @@
 # SAPOH
 US SAP CSA OpenHack
 
-# SAP & VM Azure Start / Stop Solution
+# SAP & VM Start / Stop Automation
 
 [Start-Stop Automation documentation](./06-Start-Stop-Automation).
