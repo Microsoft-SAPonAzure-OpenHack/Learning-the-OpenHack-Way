@@ -1,5 +1,6 @@
-# SAPOH
-US SAP CSA OpenHack
+# Introduction
+
+<intro items>
 
 # Challenge #6: SAP & VM Start / Stop Automation
 
