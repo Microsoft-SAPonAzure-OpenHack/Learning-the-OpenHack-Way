@@ -1,13 +1,11 @@
 # Architecture
 
-The solution is using Azure automation account PaaS solution as an automation platform to execute the SAP shutdown/startup jobs.
+The solution is using Azure automation account PaaS solution to execute the SAP shutdown/startup jobs.
 Runbooks are written in PowerShell. There is also a PowerShell module SAPAzurePowerShellModules that is used by all runbooks. These runbooks and module are stored in PowerShell Gallery, and are easy to import. 
 
 ![](Pictures/media/image5.png)
 
 Information about SAP landscape and instances are store in VM Tags.
-
-<sid>adm password needed on Windows OS is stored securely in **Credentials** area of Azure automation account. 
 
 Secure assets in Azure Automation include credentials, certificates, connections, and encrypted variables. These assets are encrypted and stored in Azure Automation using a unique key that is generated for each Automation account. [Azure Automation stores the key in the system-managed Key Vault](https://docs.microsoft.com/en-us/azure/automation/shared-resources/credentials?tabs=azure-powershell). Before storing a secure asset, Automation loads the key from Key Vault and then uses it to encrypt the asset.
 
@@ -79,16 +77,14 @@ Import these runbooks:
 
   - Tag-SAPSystemDialogInstanceLinux
 
-  - Tag-SAPSystemDVEBMGSInstanceLinux
-
-  - Tag-SAPSystemSCSInstanceLinux
-
-  - Tag-SAPSystemJavaApplicationServerInstanceLinux
-
   - Tag-SAPSystemStandaloneHANA
 
 > [!NOTE] 
 > All SAP runbooks are stored in PowerShell Gallery and are easy to import into Azure automation account.
+
+**Deplyoyed SAP Landscape**
+
+![image](https://user-images.githubusercontent.com/26795040/113300836-f87aaf80-92c3-11eb-8d37-a0aa05168f2d.png)
 
 
 **Tagging Approach**
