@@ -1,4 +1,4 @@
-# Architecture
+# Architecture of the Start/Stop solution 
 
 The solution is using Azure automation account PaaS solution to execute the SAP shutdown/startup jobs (as shown in the below diagram).
 Runbooks are written in PowerShell. There is also a PowerShell module SAPAzurePowerShellModules that is used by all runbooks. These runbooks and module are stored in PowerShell Gallery, and are easy to import. 
@@ -16,6 +16,16 @@ SAP HANA start / stop / monitoring is implemented using scripts (calling SAP sap
 SQL Server start / stop / monitoring is implemented using scripts (calling SAP Host Agent executable) via the Azure VM agent. 
 
 Azure runbooks can either be executed manually or scheduled. 
+
+**Deplyoyed SAP Landscape**
+
+In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
+
+* SAP ABAP ASCS instance
+*	ONE DBMS instance (HA for DBMS is currently not implemented)
+* One or more SAP application servers 
+
+![image](https://user-images.githubusercontent.com/26795040/113913301-c83e7f80-97a1-11eb-891c-8ba22219ae26.png)
 
 ## Tasks for participents
 
@@ -96,15 +106,7 @@ Import these runbooks:
 > All SAP runbooks are stored in PowerShell Gallery and are easy to import into Azure automation account.
 
 <br>
-**Deplyoyed SAP Landscape**
 
-In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
-
-* SAP ABAP ASCS instance
-*	ONE DBMS instance (HA for DBMS is currently not implemented)
-* One or more SAP application servers 
-
-![image](https://user-images.githubusercontent.com/26795040/113913301-c83e7f80-97a1-11eb-891c-8ba22219ae26.png)
 
 
 ## Tagging and executing Runbooks
