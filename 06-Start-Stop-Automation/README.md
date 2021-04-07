@@ -32,7 +32,7 @@ Azure runbooks can either be executed manually or scheduled.
 - Schedule scale out & scale in out the Application servers
 
 
-# Implementation
+# Implementation details
 
 **Create Azure Automation Account**
 
