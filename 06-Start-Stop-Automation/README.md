@@ -439,11 +439,15 @@ Runtime steps:
 
 ## Tasks for participents
 
+**- Tag all the VMs in a <SID>
+
+- List the SID to ensure all the systems were tagged correctly
+
 - Execute runbook manually to stop systems
 
 - Schedule the runbool to start the systems
 
-- Schedule scale out & scale in out the Application servers
+- Schedule scale out & scale in out the Application servers**
 
 
 
