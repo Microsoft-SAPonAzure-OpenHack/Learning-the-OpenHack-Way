@@ -439,7 +439,7 @@ Runtime steps:
 
 ## Tasks for participents
 
-- Tag all the VMs in a <SID>
+- Tag all the VMs for the <SID> in place
 
 - List the SID to ensure all the systems were tagged correctly
 
