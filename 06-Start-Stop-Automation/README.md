@@ -44,6 +44,8 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
 # Implementation details
 
+This section details the implementation flow of the solution
+
 ## **Create Azure Automation Account**
 
  [How to create Azure automation account](https://docs.microsoft.com/en-us/azure/automation/automation-quickstart-create-account).
@@ -64,9 +66,8 @@ Import Az modules:
 
   - **Az.Resources**
 
-<br>
 
-**Import SAP PowerShell Module**
+## **Import SAP PowerShell Module**
 
 Import **SAPAzurePowerShellModules** PowerShell module that will be used by SAP Runbooks.
 
@@ -74,7 +75,7 @@ Import **SAPAzurePowerShellModules** PowerShell module that will be used by SAP 
 > PowerShell module **SAPAzurePowerShellModules** is stored in PowerShell Gallery and is easy to import into Azure automation account.
 
 
-**Import SAP Runbooks**
+## **Import SAP Runbooks**
 
 Navigate to **Runbook** and click **Import a runbook**.
 
@@ -104,9 +105,6 @@ Import these runbooks:
 
 > [!NOTE] 
 > All SAP runbooks are stored in PowerShell Gallery and are easy to import into Azure automation account.
-
-<br>
-
 
 
 ## Tagging and executing Runbooks
@@ -263,7 +261,7 @@ VM \[ts2-di0\] has to be tagged with following Tags:
 | SAPDialogInstanceNumber | YES       | 2                   |
 
 
-# Runbook Description
+##  Runbook Description
 
 **Listing SAP System \<SID\> VMs: List-SAPSystemInstance**s
 
@@ -450,9 +448,6 @@ Runtime steps:
   - Start SAP application server.
 
   - Show summary.
-
-
-
 
 
 # Access consideration for Azure Automation Runbooks and Jobs
