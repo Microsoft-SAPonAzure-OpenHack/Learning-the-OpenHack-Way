@@ -37,7 +37,7 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
 - Execute runbook manually to stop systems
 
-- Schedule the runbool to start the systems
+- Schedule the runbook to start the systems
 
 - Schedule scale out & scale in out the Application servers
 
