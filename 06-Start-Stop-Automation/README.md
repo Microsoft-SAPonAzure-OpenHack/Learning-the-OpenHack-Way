@@ -42,7 +42,7 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 - Schedule scale out & scale in out the Application servers
 
 
-# Implementation details
+## Implementation details
 
 **Create Azure Automation Account**
 
