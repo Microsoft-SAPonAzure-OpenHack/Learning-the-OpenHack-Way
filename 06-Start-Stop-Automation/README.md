@@ -1,3 +1,16 @@
+- [Architecture of the Start/Stop solution](#architecture-of-the-start-stop-solution)
+- [Deployed SAP Landscape](#deployed-sap-landscape)
+- [Tasks for participents](#tasks-for-participents)
+- [Implementation details](#implementation-details)
+  * [**Create Azure Automation Account**](#--create-azure-automation-account--)
+  * [**Import Az.Modules**](#--import-azmodules--)
+  * [**Import SAP PowerShell Module**](#--import-sap-powershell-module--)
+  * [**Import SAP Runbooks**](#--import-sap-runbooks--)
+  * [Tagging and executing Runbooks](#tagging-and-executing-runbooks)
+  * [Runbook Description](#runbook-description)
+- [Access consideration for Azure Automation Runbooks and Jobs](#access-consideration-for-azure-automation-runbooks-and-jobs)
+  * [Limiting access to individual runbooks/jobs](#limiting-access-to-individual-runbooks-jobs)
+
 # Architecture of the Start/Stop solution 
 
 The solution is using Azure automation account PaaS solution to execute the SAP shutdown/startup jobs (as shown in the below diagram).
