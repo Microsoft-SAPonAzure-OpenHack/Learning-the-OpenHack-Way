@@ -17,6 +17,19 @@ SQL Server start / stop / monitoring is implemented using scripts (calling SAP H
 
 Azure runbooks can either be executed manually or scheduled. 
 
+## Tasks for participents
+
+- Create Azure Automation account
+
+- Tag all the VMs for the **SID** in place
+
+- List the SID to ensure all the systems were tagged correctly
+
+- Execute runbook manually to stop systems
+
+- Schedule the runbool to start the systems
+
+- Schedule scale out & scale in out the Application servers
 
 
 # Implementation
@@ -437,17 +450,6 @@ Runtime steps:
   - Show summary.
 
 
-## Tasks for participents
-
-- Tag all the VMs for the **SID** in place
-
-- List the SID to ensure all the systems were tagged correctly
-
-- Execute runbook manually to stop systems
-
-- Schedule the runbool to start the systems
-
-- Schedule scale out & scale in out the Application servers
 
 
 
