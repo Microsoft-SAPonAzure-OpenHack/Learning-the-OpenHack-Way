@@ -1,11 +1,11 @@
 # Architecture
 
-The solution is using Azure automation account PaaS solution to execute the SAP shutdown/startup jobs.
+The solution is using Azure automation account PaaS solution to execute the SAP shutdown/startup jobs (as shown in the below diagram).
 Runbooks are written in PowerShell. There is also a PowerShell module SAPAzurePowerShellModules that is used by all runbooks. These runbooks and module are stored in PowerShell Gallery, and are easy to import. 
 
 ![](Pictures/media/image5.png)
 
-Information about SAP landscape and instances are store in VM Tags.
+Information about SAP landscape and instances are to be stored in VM Tags.
 
 Secure assets in Azure Automation include credentials, certificates, connections, and encrypted variables. These assets are encrypted and stored in Azure Automation using a unique key that is generated for each Automation account. [Azure Automation stores the key in the system-managed Key Vault](https://docs.microsoft.com/en-us/azure/automation/shared-resources/credentials?tabs=azure-powershell). Before storing a secure asset, Automation loads the key from Key Vault and then uses it to encrypt the asset.
 
@@ -15,7 +15,7 @@ SAP HANA start / stop / monitoring is implemented using scripts (calling SAP sap
 
 SQL Server start / stop / monitoring is implemented using scripts (calling SAP Host Agent executable) via the Azure VM agent. 
 
-Every Azure runbook can be executed either manually or it can be scheduled. 
+Azure runbooks can either be executed manually or scheduled. 
 
 
 
@@ -23,7 +23,7 @@ Every Azure runbook can be executed either manually or it can be scheduled.
 
 **Create Azure Automation Account**
 
-First, [create an Azure Automation account](https://docs.microsoft.com/en-us/azure/automation/automation-quickstart-create-account).
+ [How to create Azure automation account](https://docs.microsoft.com/en-us/azure/automation/automation-quickstart-create-account).
 
 
 
@@ -85,16 +85,18 @@ Import these runbooks:
 <br>
 **Deplyoyed SAP Landscape**
 
-In the deployed SAP landscape we have:
+In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
 * SAP ABAP ASCS instance
 *	ONE DBMS instance (HA for DBMS is currently not implemented)
 * One or more SAP application servers 
 
-![image](https://user-images.githubusercontent.com/26795040/113300836-f87aaf80-92c3-11eb-8d37-a0aa05168f2d.png)
+![image](https://user-images.githubusercontent.com/26795040/113913301-c83e7f80-97a1-11eb-891c-8ba22219ae26.png)
 
 
-## Example Distributed SAP ABAP System with HANA – ALL Linux
+## Tagging and executing Runbooks
+
+**Example Distributed SAP ABAP System with HANA – ALL Linux**
 
 Here is an example of a distributed SAP ABAP System **TS1** with HANA
 DB. ALL VMs are Linux VMs. SAP HANA SID **TS2** is different than SAP
@@ -102,7 +104,7 @@ SID **TS1**.
 
 ![](Pictures/media/image53.png)
 
-### HANA DB VM
+**HANA DB VM**
 
 DB has following properties.
 
@@ -158,7 +160,7 @@ Tagging process run this Azure runbook: **Tag-SAPSystemStandaloneHANA**
 | SAPHANASID            | YES       | TS2               |
 | SAPHANAINstanceNumber | YES       | 0                 |
 
-### ASCS VM
+**ASCS VM**
 
 ASCS has following properties.
 
@@ -188,7 +190,7 @@ Tagging process run this Azure runbook:
 | SAPSID                | YES       | TS1               |
 | SAPASCSInstanceNumber | YES       | 1                 |
 
-### SAP Application Server 1 VM
+**SAP Application Server VM #1 **
 
 SAP application server 1 has following properties.
 
@@ -217,7 +219,7 @@ Tagging process run this Azure runbook: Tag-SAPSystemDialogInstanceLinux
 | SAPSID                  | YES       | TS1               |
 | SAPDialogInstanceNumber | YES       | 1                 |
 
-### SAP Application Server 2 VM
+**SAP Application Server VM #2**
 
 SAP application server 2 has following properties.
 
@@ -236,8 +238,7 @@ VM \[ts2-di0\] has to be tagged with following Tags:
 | SAPApplicationInstanceType   | SAP\_D |
 | SAPApplicationInstanceNumber | 2      |
 
-You can create these Tags manually. However, to simplify and automate
-Tagging process run this Azure runbook: Tag-SAPSystemDialogInstanceLinux
+**You can create these Tags manually. However, to simplify, avoid typos, and automate the tagging process use Azure runbook**: Tag-SAPSystemDialogInstanceLinux
 
 | Parameter               | Mandatory | Value               |
 | ----------------------- | --------- | ------------------- |
@@ -249,25 +250,19 @@ Tagging process run this Azure runbook: Tag-SAPSystemDialogInstanceLinux
 
 # Runbook Description
 
-Listing SAP System \<SID\> VMs  
-To check and list VMs associated to an SAP SID run Runbook:
-**List-SAPSystemInstances**
+**Listing SAP System \<SID\> VMs: List-SAPSystemInstance**s
 
 | Parameter | Mandatory | Default value | Comment |
 | --------- | --------- | ------------- | ------- |
 | SAPSID    | YES       |               |         |
 
-Listing SAP HANA VM  
-To check and list VMs associated to an SAP SID run Runbook: **List-**
-**SAPHANAInstance**
+**Listing SAP HANA VM: List-SAPHANAInstance**
 
 | Parameter | Mandatory | Default value | Comment |
 | --------- | --------- | ------------- | ------- |
 | SAPSID    | YES       |               |         |
 
-Start SAP System
-
-To start SAP System run Runbook: **Start-SAPSystem**
+**Start SAP System: Start-SAPSystem**
 
 | Parameter                 | Mandatory | Default value | Comment                                                |
 | ------------------------- | --------- | ------------- | ------------------------------------------------------ |
@@ -276,7 +271,7 @@ To start SAP System run Runbook: **Start-SAPSystem**
 | ConvertDisksToPremium     | No        | $False        | If set to $True, all disk will be converted to Premium |
 | PrintExecutionCommand     | No        | $False        | If set to $True, all OS commands will be printed       |
 
-Runtime steps are:
+**Runtime steps:**
 
   - Convert disk to Premium, if desired  
     ConvertDisksToPremium = $True
@@ -306,9 +301,7 @@ Runtime steps are:
 
   - Show summary.
 
-Stop SAP System
-
-To stop SAP System run Runbook: **Stop-SAPSystem**
+**Stop SAP System: Stop-SAPSystem**
 
 | Parameter                 | Mandatory | Default value | Comment                                                 |
 | ------------------------- | --------- | ------------- | ------------------------------------------------------- |
@@ -346,7 +339,7 @@ Runtime steps:
 
   - Show summary.
 
-Start-SAPHANADB
+**Start-SAPHANADB**
 
 This runbook will only start VM and standalone HANA DB.
 
@@ -371,7 +364,7 @@ Runtime steps are:
 
   - Show summary.
 
-Stop-SAPHANADB
+**Stop-SAPHANADB**
 
 This runbook will stop standalone HANA DB, and VM.
 
@@ -398,7 +391,7 @@ Runtime steps:
 
 ## 
 
-Stop- SAPApplicationServer
+**Stop- SAPApplicationServer**
 
 This runbook will stop standalone SAP Application Server and VM.
 
@@ -421,7 +414,7 @@ Runtime steps:
 
   - Show summary.
 
-Start- SAPApplicationServer
+**Start- SAPApplicationServer**
 
 This runbook will start VM and standalone SAP Application Server.
 
@@ -444,104 +437,16 @@ Runtime steps:
 
   - Show summary.
 
-# How to start a runbook
 
-Go to **Runbooks**
+**Tasks:**
 
-![](Pictures/media/image57.png)
+- Execute runbook manually to stop systems
 
-Click on one runbook, for example **Start-SAPSystem**
+- Schedule the runbool to start the systems
 
-![](Pictures/media/image58.png)
-
-And click **Start** , fill the required parameters (**\***), and click
-**OK**
-
-![](Pictures/media/image59.png)
-
-**INFO**: Parameters with **\*** are **mandatory\!**
+- Schedule scale out & scale in out the Application servers
 
 
-### Create / Add Schedule  
-
-Go to ***Schedules*** tab and click ***Add schedule***
-
-![](Pictures/media/image63.png)
-
-Configure parameters and click ***Create***  
-In example below, it is configured Start Schedule at 9 am , from Monday
-till Friday:
-
-![](Pictures/media/image64.png)
-
-![](Pictures/media/image65.png)
-
-### Link Schedule to a runbook and specify input parameters.
-
-Go to ***Runbooks*** and click on one runbook, choose Schedules tab,
-click ***Add a schedule***.
-
-![](Pictures/media/image66.png)
-
-![](Pictures/media/image67.png)
-
-Click “**Link a schedule to your runbook**”, and choose previously
-created schedule “**Start TS1 SAP System**”.
-
-![](Pictures/media/image68.png)
-
-Click on “**Configure parameters and run settings**”
-
-![](Pictures/media/image69.png)
-
-And fill the parameters and click **OK**.
-
-![](Pictures/media/image70.png)
-
-Here is the list of all schedules:
-
-![](Pictures/media/image71.png)
-
-Repeat the same steps to create Stop schedule, e.g. using
-**Stop-SAPSystem** runbook, with schedule for example to stop SAP system
-TS1 at 6 pm.
-
-# Schedule Scale Out / Scale In of SAP Application Servers
-
-SAP runbooks:
-
-  - Start-SAPApplicationServer
-
-  - Stop-SAPApplicationServer
-
-can be used to implement SAP application server scale out / scale in
-scenario.
-
-Assumption are:
-
-  - SAP administer knows about their expected peaks, when the peak
-    starts and when it ends , and they knows out of experience how much
-    SAPS e.g. how many SAP application servers will be needed for this
-    action.
-
-  - SAP application servers are already installed.
-
-  - Different SAP logon groups are already preconfigured.
-
-A scenario example could be:
-
-  - There is a black Friday peak, which last for 4 days – before peak
-    starts, you would schedule start of certain number of SAP
-    application servers. You would also schedule by the end of the peak
-    to stop these SAP application servers and VMs.
-
-  - Is know that during the working hours you need more SAPS that during
-    the night
-
-Stopping can be done with **Soft shutdown** approach, so application
-severe will go gradually through the stop process, and users will have
-time to log off, SAP batch jobs will have time to finish, until the
-specified time out is reached.
 
 # Access consideration for Azure Automation Runbooks and Jobs
 
