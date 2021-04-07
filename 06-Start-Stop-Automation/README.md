@@ -17,7 +17,7 @@ SQL Server start / stop / monitoring is implemented using scripts (calling SAP H
 
 Azure runbooks can either be executed manually or scheduled. 
 
-## Deplyoyed SAP Landscape
+## Deployed SAP Landscape
 
 In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
