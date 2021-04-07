@@ -389,7 +389,6 @@ Runtime steps:
 
   - Show summary.
 
-## 
 
 **Stop- SAPApplicationServer**
 
@@ -438,7 +437,7 @@ Runtime steps:
   - Show summary.
 
 
-**Tasks:**
+## Tasks for participents
 
 - Execute runbook manually to stop systems
 
