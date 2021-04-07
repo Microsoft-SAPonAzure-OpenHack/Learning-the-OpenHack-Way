@@ -17,7 +17,7 @@ SQL Server start / stop / monitoring is implemented using scripts (calling SAP H
 
 Azure runbooks can either be executed manually or scheduled. 
 
-## Deployed SAP Landscape
+# Deployed SAP Landscape
 
 In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
@@ -27,7 +27,7 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
 ![image](https://user-images.githubusercontent.com/26795040/113913301-c83e7f80-97a1-11eb-891c-8ba22219ae26.png)
 
-## Tasks for participents
+# Tasks for participents
 
 - Create Azure Automation account
 
@@ -42,15 +42,15 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 - Schedule scale out & scale in out the Application servers
 
 
-## Implementation details
+# Implementation details
 
-**Create Azure Automation Account**
+## **Create Azure Automation Account**
 
  [How to create Azure automation account](https://docs.microsoft.com/en-us/azure/automation/automation-quickstart-create-account).
 
 
 
-**Import Az.Modules**
+## **Import Az.Modules**
 
 SAP start / stop PowerShell (PS) runbooks use new Az PS module, which must be [imported](https://docs.microsoft.com/en-us/azure/automation/az-modules#import-the-az-modules) .
 
