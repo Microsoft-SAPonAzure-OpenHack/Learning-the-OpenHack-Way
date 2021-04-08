@@ -56,6 +56,8 @@ In the deployed SAP landscape we have: (Deployment scenario #2 in below diagram)
 
 - Schedule scale out & scale in out the Application servers
 
+- (Optional) Restrict access to runbooks to an individual user
+
 
 # Implementation details
 
