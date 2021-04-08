@@ -12,7 +12,7 @@ how you doing?
 
 # Challenge #5: 
 
-# Challenge #6: Application aware graceful stop & start
+# Challenge #6: Application aware graceful maintenance
 
 The goal of this solution is to facilitate a controlled shutdown & startup of SAP systems, which is a common mechanism to save costs for non Reserved Instances (RI) VMs in Azure.
 
