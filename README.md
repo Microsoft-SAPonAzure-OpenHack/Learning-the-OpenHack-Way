@@ -11,6 +11,8 @@ how you doing?
 [ANF documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/04-ANF)
 
 # Challenge #5: 
+[PowerApps documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/blob/main/05-PowerApps)
+
 
 # Challenge #6: Application aware maintenance (Start/Stop/Scale)
 
