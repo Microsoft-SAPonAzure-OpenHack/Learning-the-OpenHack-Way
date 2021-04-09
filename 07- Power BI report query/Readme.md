@@ -81,7 +81,7 @@ Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bas
 COMPLETE - Finalize the Architecture 
 
  
-
+![](media/GetImage.png)
  
 
 Connect to SAP HANA data sources using Direct Query in Power Bl 
