@@ -18,13 +18,13 @@ COMPLETE - Finalize the description for challenge
 
  
 
-      Generate self-service SAP system  report about batch jobs status and  name from SAP system. 
+   Generate self-service SAP system  report about batch jobs status and  name from SAP system. 
 
  
 
-      Taks 1: Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
+   Taks 1: Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
 
-      Taks2 : Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
+   Taks2 : Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
 
  
 
