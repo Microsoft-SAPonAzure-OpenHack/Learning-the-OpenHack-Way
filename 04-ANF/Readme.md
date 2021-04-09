@@ -17,6 +17,7 @@ Execution Guidelines:
 			iv. Point-in-Time recovery for up to the last 72 hours
 			v. Additional protection of backup files by offloading to an intra region storage account
 		b. Update the below backup schedule (frequency, retention, offloading, sizing)
+		
       	![image](https://user-images.githubusercontent.com/35502723/114223275-39fb0280-9935-11eb-80a4-66df0dec9c05.png)
 
 		
