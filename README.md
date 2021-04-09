@@ -3,7 +3,7 @@
 how you doing?
 
 
-# Challenge #1:  
+# Challenge #1: SAP Deployment
 
 [Automated deployment of SAP environment](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/01-SAP-Auto-Deployment)
 
