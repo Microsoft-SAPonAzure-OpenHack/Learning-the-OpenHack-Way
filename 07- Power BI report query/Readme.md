@@ -28,21 +28,21 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-* Download Power  BI  desktop from windows power app platfrom  
+   * Download Power  BI  desktop from windows power app platfrom  
 
-* Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
+   * Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
 
-* For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
+   * For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
 
-* Open the BI desktop client and execute the connection configure for SAP HANA database. 
+   * Open the BI desktop client and execute the connection configure for SAP HANA database. 
 
-* Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
+   * Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
 
-* Select Appropriate user name,  password and SSL encryption - none 
+   * Select Appropriate user name,  password and SSL encryption - none 
 
-* Select direct query for data connectivity Mode  
+   * Select direct query for data connectivity Mode  
 
-* Extract the data and see the  tabular from of the DB 
+   * Extract the data and see the  tabular from of the DB 
 
  
 
