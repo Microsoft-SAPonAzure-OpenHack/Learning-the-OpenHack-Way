@@ -1,4 +1,4 @@
-Description: 
+**Description: **
 
  
 
@@ -6,15 +6,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-Owners:  
-
-Uday, Rajesh and Satish 
-
- 
-
- 
-
-COMPLETE - Finalize the description for challenge 
+**COMPLETE - Finalize the description for challenge **
 
  
 
@@ -32,45 +24,25 @@ COMPLETE - Finalize the description for challenge
 
  
 
-COMPLETE - Understand required Architecture, Azure components / Services 
+** COMPLETE - Understand required Architecture, Azure components / Services **
 
  
 
-Download Power  BI  desktop from windows power app platfrom  
+* Download Power  BI  desktop from windows power app platfrom  
 
-Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
+* Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
 
-For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
+* For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
 
-Open the BI desktop client and execute the connection configure for SAP HANA database. 
+* Open the BI desktop client and execute the connection configure for SAP HANA database. 
 
-Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
+* Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
 
-Select Appropriate user name,  password and SSL encryption - none 
+* Select Appropriate user name,  password and SSL encryption - none 
 
-Select direct query for data connectivity Mode  
+* Select direct query for data connectivity Mode  
 
-Extract the data and see the  tabular from of the DB 
-
- 
-
- 
-
- 
-
-COMPLETE - Get equipped with necessary skills / Knowledge 
-
- 
-
-Target Roles: DBA, BASIS and Technical Architect 
-
-SAP HANA database administrator  
-
-Report creation and selection for data analytics 
-
-HANA DB skills – how to create Schema user and assign roles and privileges 
-
-Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bash scripting, Linux Administration 
+* Extract the data and see the  tabular from of the DB 
 
  
 
@@ -78,24 +50,44 @@ Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bas
 
  
 
-COMPLETE - Finalize the Architecture 
+** COMPLETE - Get equipped with necessary skills / Knowledge ** 
+
+ 
+
+* Target Roles: DBA, BASIS and Technical Architect 
+
+* SAP HANA database administrator  
+
+* Report creation and selection for data analytics 
+
+* HANA DB skills – how to create Schema user and assign roles and privileges 
+
+* Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bash scripting, Linux Administration 
+
+ 
+
+ 
+
+ 
+
+** COMPLETE - Finalize the Architecture ** 
 
  
 ![](media/GetImage.png)
  
 
-Connect to SAP HANA data sources using Direct Query in Power Bl 
-ODBC connec or to HANA database 
-SAP S,'4 CAL 1909 HANA 
-Online 
-Published 
-Power Bl Apps 
-Power Bl 
-Desktop 
-Client 
-Jump box running HANA 
-studio and Power Bl 
-desktop client 
+* Connect to SAP HANA data sources using Direct Query in Power Bl 
+* ODBC connec or to HANA database 
+* SAP S,'4 CAL 1909 HANA 
+* Online 
+* Published 
+* Power Bl Apps 
+* Power Bl 
+* Desktop 
+* Client 
+* Jump box running HANA 
+* studio and Power Bl 
+* desktop client 
  
 
  
