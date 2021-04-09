@@ -17,9 +17,12 @@ Execution Guidelines:
 			iv. Point-in-Time recovery for up to the last 72 hours
 			v. Additional protection of backup files by offloading to an intra region storage account
 		b. Update the below backup schedule (frequency, retention, offloading, sizing)
-
-![image](https://user-images.githubusercontent.com/35502723/114223275-39fb0280-9935-11eb-80a4-66df0dec9c05.png)      	
-
+		Protect:	Size (customer provided)	Frequency	Retention	Offloading
+		HANA data	1 TiB	?	?	To a separate blob container, retain for 7 days. 
+			(20% YoY Growth)
+		HANA log backups	250 GiB 	?	?	To a separate blob container, retain for 7 days.
+		Shared binaries and profiles	100 GiB	?	?	To a separate blob container, retain for 7 days.
+		(Please note that this OpenHack environment is a scaled down version of the above production-like scenario. Also, we will not protect Shared binaries for this challenge.)
 		
 		c. Adjust log backup volume size for storing log backups, and adjust relevant HANA parameters to use this volume for log backups.
 		d. Protect ANF resources from accidental deletion
@@ -58,4 +61,4 @@ Hints/Resources:
 	2. https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage
 	3. Requirements and considerations for using Azure NetApp Files volume cross-region replication | Microsoft Docs
 	4. Blog: Search - Microsoft Tech Community
-![image](https://user-images.githubusercontent.com/35502723/114222795-a32e4600-9934-11eb-8ef4-16724adc8ae3.png)
+![image](https://user-images.githubusercontent.com/35502723/114223733-c9081a80-9935-11eb-99a0-c5c828852f17.png)
