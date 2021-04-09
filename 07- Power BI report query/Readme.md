@@ -24,7 +24,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**COMPLETE - Understand required Architecture, Azure components / Services**
+2. **COMPLETE - Understand required Architecture, Azure components / Services**
 
  
 
@@ -50,7 +50,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**COMPLETE - Get equipped with necessary skills / Knowledge** 
+3. **COMPLETE - Get equipped with necessary skills / Knowledge** 
 
  
 
@@ -70,7 +70,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**COMPLETE - Finalize the Architecture** 
+4. **COMPLETE - Finalize the Architecture** 
 
  
 ![](media/GetImage.png)
@@ -94,7 +94,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**COMPLETE - Due Jan 30th - Build prototype and testing**
+5. **COMPLETE - Due Jan 30th - Build prototype and testing**
 
  
 
