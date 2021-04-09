@@ -2,7 +2,7 @@ What is Azure Security Center?
 02/17/2021
 8 minutes to read
 
-
+![](sc-dashboard.png)
 
 
 
