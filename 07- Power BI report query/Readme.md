@@ -76,24 +76,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 ![](media/GetImage.png)
  
 
-   * Connect to SAP HANA data sources using Direct Query in Power Bl 
-   * ODBC connec or to HANA database 
-   * SAP S,'4 CAL 1909 HANA 
-   * Online 
-   * Published 
-   * Power Bl Apps 
-   * Power Bl 
-   * Desktop 
-   * Client 
-   * Jump box running HANA 
-   * studio and Power Bl 
-   * desktop client 
- 
-
- 
-
- 
-
+   
 5. **COMPLETE - Due Jan 30th - Build prototype and testing**
 
  
