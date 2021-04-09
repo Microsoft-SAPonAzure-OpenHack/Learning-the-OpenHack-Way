@@ -6,7 +6,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**COMPLETE - Finalize the description for challenge**
+1. **COMPLETE - Finalize the description for challenge**
 
  
 
