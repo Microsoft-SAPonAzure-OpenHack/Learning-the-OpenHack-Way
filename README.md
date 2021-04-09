@@ -29,4 +29,5 @@ SAP systems start and stop is done gracefully (using SAP native commands), allow
 
 Go to the following link to get started with participant guide: [Start-Stop Automation documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/SAPOH/blob/main/06-Start-Stop-Automation)
 
-# Challenge #7: 
+# Challenge #7: PowerAPPS
+[PowerApps documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/blob/main/05-PowerApps)
