@@ -54,15 +54,15 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-* Target Roles: DBA, BASIS and Technical Architect 
+   * Target Roles: DBA, BASIS and Technical Architect 
 
-* SAP HANA database administrator  
+   * SAP HANA database administrator  
 
-* Report creation and selection for data analytics 
+   * Report creation and selection for data analytics 
 
-* HANA DB skills – how to create Schema user and assign roles and privileges 
+   * HANA DB skills – how to create Schema user and assign roles and privileges 
 
-* Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bash scripting, Linux Administration 
+   * Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bash scripting, Linux Administration 
 
  
 
@@ -76,18 +76,18 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 ![](media/GetImage.png)
  
 
-* Connect to SAP HANA data sources using Direct Query in Power Bl 
-* ODBC connec or to HANA database 
-* SAP S,'4 CAL 1909 HANA 
-* Online 
-* Published 
-* Power Bl Apps 
-* Power Bl 
-* Desktop 
-* Client 
-* Jump box running HANA 
-* studio and Power Bl 
-* desktop client 
+   * Connect to SAP HANA data sources using Direct Query in Power Bl 
+   * ODBC connec or to HANA database 
+   * SAP S,'4 CAL 1909 HANA 
+   * Online 
+   * Published 
+   * Power Bl Apps 
+   * Power Bl 
+   * Desktop 
+   * Client 
+   * Jump box running HANA 
+   * studio and Power Bl 
+   * desktop client 
  
 
  
@@ -98,29 +98,29 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-* Building the prototype and respective testing: 
+   * Building the prototype and respective testing: 
 
-* Base Infra to support the challenge - VMs, ANF volumes, scale-out HANA 
+   * Base Infra to support the challenge - VMs, ANF volumes, scale-out HANA 
 
-* Download power BI desktop and configure 
+   * Download power BI desktop and configure 
 
-* Create HANA DB schema and user , assign appropriate roles and privileges  to user to extract the data 
+   * Create HANA DB schema and user , assign appropriate roles and privileges  to user to extract the data 
 
-* Extract the data and start working filtering and value selection 
+   * Extract the data and start working filtering and value selection 
 
-* Generate the Chart  
+   * Generate the Chart  
 
-* Publish the Chart 
+   * Publish the Chart 
 
 6. **IN PROGRESS BUT AT RISK OF DELAY - Document the challenge and the step by step process**
 
  
 
-* Document the Challenge - Participant Guide (by 2/12) 
+   * Document the Challenge - Participant Guide (by 2/12) 
 
-* Participant Documentation ( in progress)  
+   * Participant Documentation ( in progress)  
 
-* Document the Challenge -  ( in progress )  
+   * Document the Challenge -  ( in progress )  
 
 7. **PLANNED -Test documented process**
 
@@ -136,7 +136,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
 13. **Other**
 
-Take snapshot based Hana backup on region1 SAP system and do the system refresh on region 2 SAP system. 
+   Take snapshot based Hana backup on region1 SAP system and do the system refresh on region 2 SAP system. 
 
  
 
