@@ -61,4 +61,4 @@ Hints/Resources:
 	2. https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-vm-operations-storage
 	3. Requirements and considerations for using Azure NetApp Files volume cross-region replication | Microsoft Docs
 	4. Blog: Search - Microsoft Tech Community
-![image](https://user-images.githubusercontent.com/35502723/114223733-c9081a80-9935-11eb-99a0-c5c828852f17.png)
+
