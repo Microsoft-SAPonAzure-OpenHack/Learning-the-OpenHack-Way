@@ -14,9 +14,9 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-   * Taks 1: Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
+   * Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
 
-   * Taks2 : Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
+   * Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
 
  
 
@@ -98,93 +98,43 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-Building the prototype and respective testing: 
+* Building the prototype and respective testing: 
 
-Base Infra to support the challenge - VMs, ANF volumes, scale-out HANA 
+* Base Infra to support the challenge - VMs, ANF volumes, scale-out HANA 
 
-Download power BI desktop and configure 
+* Download power BI desktop and configure 
 
-Create HANA DB schema and user , assign appropriate roles and privileges  to user to extract the data 
+* Create HANA DB schema and user , assign appropriate roles and privileges  to user to extract the data 
 
-Extract the data and start working filtering and value selection 
+* Extract the data and start working filtering and value selection 
 
-Generate the Chart  
+* Generate the Chart  
 
-Publish the Chart 
+* Publish the Chart 
 
-IN PROGRESS BUT AT RISK OF DELAY - Document the challenge and the step by step process 
-
- 
-
-Document the Challenge - Participant Guide (by 2/12) 
-
-Participant Documentation ( in progress)  
-
-Document the Challenge -  ( in progress )  
-
-PLANNED -Test documented process 
+6. **IN PROGRESS BUT AT RISK OF DELAY - Document the challenge and the step by step process**
 
  
 
- 
+* Document the Challenge - Participant Guide (by 2/12) 
+
+* Participant Documentation ( in progress)  
+
+* Document the Challenge -  ( in progress )  
+
+7. **PLANNED -Test documented process**
 
  
+8. **PLANNED -Internal dry run with in Team and identify any gaps**
 
-PLANNED -Internal dry run with in Team and identify any gaps 
+9. **PLANNED -Update documentation based on leanings**
+10. **PLANNED -Dry run with CSA community**
 
- 
+11. **PLANNED -If there are any lessons, update documentation**
 
- 
+12. **PLANNED -Ready to conduct OpenHack at the customer**
 
- 
-
-PLANNED -Update documentation based on leanings 
-
- 
-
- 
-
- 
-
-PLANNED -Dry run with CSA community 
-
- 
-
- 
-
- 
-
-PLANNED -If there are any lessons, update documentation 
-
- 
-
- 
-
- 
-
-PLANNED -Ready to conduct OpenHack at the customer 
-
- 
-
- 
-
- 
-
-Other 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
+13. **Other**
 
 Take snapshot based Hana backup on region1 SAP system and do the system refresh on region 2 SAP system. 
 
