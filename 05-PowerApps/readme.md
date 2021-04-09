@@ -65,12 +65,13 @@ Connect the vertical gallery to collection object "QueryResults" which was pre-l
 ![image](https://user-images.githubusercontent.com/45843990/114222209-1fb82900-9923-11eb-951e-30dd7cfa2238.png)
 
 
-Reference documents:
+**Reference documents:**
+
 • SAP ERP Connector in power Apps https://powerapps.microsoft.com/en-us/blog/introducing-the-sap-erp-connector/
 • Power Apps Canvas Apps: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/
 • Create collection: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-update-collection
 • Using Flows in PowerApps: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/using-logic-flows
-![image](https://user-images.githubusercontent.com/45843990/114222233-26df3700-9923-11eb-93c1-98f493f9d6f5.png)
+
 
 
 
