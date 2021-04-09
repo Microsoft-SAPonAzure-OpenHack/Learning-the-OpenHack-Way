@@ -1,1 +1,2 @@
-hello
+Mango Inc warehouse employees should able to identify available materials along with base unit of measurement in real time for available materials in their base plant from their existing mobile device. Design a power application that can be accessible from tablet to search materials in employees own sales organization and plant. This application design consists of building required infrastructure and power application. High level architecture looks like:![image](https://user-images.githubusercontent.com/45843990/114218120-ddd8b400-991d-11eb-87fd-d7edc227f2dd.png)
+
