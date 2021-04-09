@@ -10,9 +10,9 @@ hello there - do this don't do that
 
 # Challenge #2: 
 # Challenge #3: 
-# Challenge #4: ANF
+# Challenge #4: BCDR with ANF
 
-[ANF documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/04-ANF)
+[BCDR with ANF documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/04-BCDR with ANF)
 
 # Challenge #5: 
 [PowerApps documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/blob/main/05-PowerApps)
