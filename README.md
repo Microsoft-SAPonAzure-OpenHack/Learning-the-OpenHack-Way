@@ -5,7 +5,7 @@ how you doing?
 
 # Challenge #1:  
 
-hello there - do this don't do that
+[Automated deployment of SAP environment](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/01-SAP-Auto-Deployment)
 
 
 # Challenge #2: 
