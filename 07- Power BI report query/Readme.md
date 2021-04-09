@@ -22,9 +22,9 @@ COMPLETE - Finalize the description for challenge
 
  
 
-   Taks 1: Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
+   * Taks 1: Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
 
-   Taks2 : Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
+   * Taks2 : Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
 
  
 
