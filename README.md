@@ -4,6 +4,10 @@ how you doing?
 
 
 # Challenge #1:  
+
+hello there - do this don't do that
+
+
 # Challenge #2: 
 # Challenge #3: 
 # Challenge #4: ANF
