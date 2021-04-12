@@ -8,7 +8,8 @@ Participants work together in teams to complete challenges that increase in comp
 [Automated deployment of SAP environment](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/01-SAP-Auto-Deployment)
 
 
-## Challenge #2: 
+## Challenge #2: Azure Monitor
+
 ## Challenge #3: SAP Security
 ## Challenge #4: BCDR with ANF
 
