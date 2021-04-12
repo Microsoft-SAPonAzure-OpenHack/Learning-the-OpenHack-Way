@@ -9,13 +9,14 @@ Participants work together in teams to complete challenges that increase in comp
 
 
 ## Challenge #2: 
-## Challenge #3: 
+## Challenge #3: SAP Security
 ## Challenge #4: BCDR with ANF
 
 
 [BCDR with ANF documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/04-BCDR%20with%20ANF)
 
-## Challenge #5: 
+## Challenge #5: PowerApps
+
 [PowerApps documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/blob/main/05-PowerApps)
 
 
@@ -35,4 +36,5 @@ SAP systems start and stop is done gracefully (using SAP native commands), allow
 Go to the following link to get started with participant guide: [Start-Stop Automation documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/SAPOH/blob/main/06-Start-Stop-Automation)
 
 ## Challenge #7: Power BI report query
+
 [Power BI report query documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/07-%20Power%20BI%20report%20query)
