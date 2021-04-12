@@ -18,6 +18,8 @@ Participants work together in teams to complete challenges and are actively enga
 
 ## Challenge #5: PowerApps
 
+Mango Inc warehouse employees should able to identify available materials along with base unit of measurement in real time for available materials in their base plant from their existing mobile device. Design a power application that can be accessible from tablet to search materials in employees own sales organization and plant.
+
 [PowerApps documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/blob/main/05-PowerApps)
 
 
