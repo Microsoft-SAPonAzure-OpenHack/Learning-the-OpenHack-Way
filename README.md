@@ -1,6 +1,6 @@
 # Welcome to SAP on Azure OpenHack
 
-Participants work together in teams to complete challenges that increase in complexity and are actively engaged, requiring deep collaboration, as they learn together!
+Participants work together in teams to complete challenges and are actively engaged, requiring deep collaboration, as they learn together!
 
 
 ## Challenge #1: SAP Deployment
