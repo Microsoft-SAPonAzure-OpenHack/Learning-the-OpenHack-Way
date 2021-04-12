@@ -38,4 +38,8 @@ Go to the following link to get started with participant guide: [Start-Stop Auto
 
 ## Challenge #7: Power BI report query
 
+Generate self-service sales report from SAP system. 
+- Option 1: Extract sales data from SAP system to ADLS and generate analytics report using power BI /Synapse. 
+- Option 2:  Generate self-service sales report using direct query to SAP HANA system.
+
 [Power BI report query documentation](https://github.com/Microsoft-SAPonAzure-OpenHack/Learning-the-OpenHack-Way/tree/main/07-%20Power%20BI%20report%20query)
