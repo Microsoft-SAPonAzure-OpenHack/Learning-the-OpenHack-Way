@@ -30,8 +30,6 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
- 
-
 # Understand required Architecture, Azure components / Services
 
  
@@ -54,11 +52,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
- 
-
- 
-
-# Get equipped with necessary skills / Knowledge 
+ # Get equipped with necessary skills / Knowledge 
 
  
 
