@@ -1,0 +1,25 @@
+ReadMe
+Welcome to Azure Monitor Challenge.
+
+As part of the Azure Monitor Challenge, the participants will learn the enablement of the Azure Monitor for SAP On Azure deployment.
+
+Scenario#
+One of Microsoft customers migrated the first waves of SAP Landscape on Azure, and one of the requirements from stakeholders is to configure Azure native services for Monitoring the solution.
+
+Challenges#
+1. Deploy SAP On Azure monitoring solution with OS & SAP NetWeaver providers. 
+2. Configure log analytics workspace and review the stats for troubleshooting using Kusto query. 
+
+Tasks#
+Task1: Create a Log Analytics Workspace. 
+Task2: Deploy Azure Monitor for SAP. 
+Task3: Enable VM Insights on Virtual Machines running SAP Workloads and connect to log analytics workspace created as part of Task1. 
+Task4: Configure OS, SAP NetWeaver providers. 
+Task5: Check for Monitoring data in Log Analytics Workspace. 
+Task6: Use Kusto query to create custom dashboard and setup alerts.
+
+
+
+Reference:
+https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-overview
+https://docs.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-enable-overview
