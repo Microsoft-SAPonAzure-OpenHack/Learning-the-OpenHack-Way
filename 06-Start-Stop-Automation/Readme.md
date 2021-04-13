@@ -10,8 +10,6 @@
   * [Import SAP Runbooks](#--import-sap-runbooks--)
   * [Tagging and executing Runbooks](#tagging-and-executing-runbooks)
   * [Runbook Description](#runbook-description)
-- [Access consideration for Azure Automation Runbooks and Jobs](#access-consideration-for-azure-automation-runbooks-and-jobs)
-  * [Limiting access to individual runbooks/jobs](#limiting-access-to-individual-runbooks-jobs)
 
 # Architecture of the Start/Stop solution 
 
@@ -466,88 +464,3 @@ Runtime steps:
 
   - Show summary.
 
-
-# Access consideration for Azure Automation Runbooks and Jobs
-
-Utilizing the SAP start/stop automation you can also limit the rights on
-Azure resources such as VMs while at same time do a finer grained
-segregation of access to individual Automation runbooks and jobs.
-
-The deployed Azure Automation account inherits role assignments from the
-resource group and/or subscription/management group. Utilizing the
-principle of least privileges, you might or might not already have
-rights to start/stop Automation runbooks and view runbook jobs outputs.
-
-The following is a list of prebuild roles for Automation accounts, as
-applicable in the context of this document. Full list of roles for
-Automation can be seen here in documentation.
-
-| **Role**                    | **Description**                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Owner                       | The Owner role allows access to all resources and actions within an Automation account including providing access to other users, groups, and applications to manage the Automation account.                                                                                                                                                                                  |
-| Contributor                 | The Contributor role allows you to manage everything except modifying other user’s access permissions to an Automation account.                                                                                                                                                                                                                                               |
-| Reader                      | The Reader role allows you to view all the resources in an Automation account but cannot make any changes.                                                                                                                                                                                                                                                                    |
-| User Access Administrator   | The User Access Administrator role allows you to manage user access to Azure Automation accounts.                                                                                                                                                                                                                                                                             |
-| Automation Operator         | The Automation Operator role allows you to view runbook name and properties and to create and manage jobs for all runbooks in an Automation account. This role is helpful if you want to protect your Automation account resources like credentials assets and runbooks from being viewed or modified but still allow members of your organization to execute these runbooks. |
-| Automation Job Operator     | The Automation Job Operator role allows you to create and manage jobs for all runbooks in an Automation account.                                                                                                                                                                                                                                                              |
-| Automation Runbook Operator | The Automation Runbook Operator role allows you to view a runbook’s name and properties.                                                                                                                                                                                                                                                                                      |
-
-In other words, to grant access to a group to manage/create and operate
-Automation runbooks and jobs, on the entire SAP start/stop automation
-account, use the Automation Operator role.
-
-Open the Automation Account in Azure Portal and navigate to Access
-control (IAM).  
-On tab Role assignments you can see currently assigned groups to this
-resource.
-
-## Limiting access to individual runbooks/jobs
-
-The above section provides access to the entire Azure Automation
-account.  
-If however, you want to provide access to individual runbooks or jobs,
-this can NOT be accomplished using Azure Portal currently.
-
-As a solution however you can utilize below PowerShell to grant access
-to individual sub-resources inside the Automation Account. This is
-shorted from the public documentation here.
-
-$rgName = "\<Resource Group Name\>" \# Resource Group name for the
-Automation Account  
-$automationAccountName ="\<Automation account name\>" \# Name of the
-Automation Account  
-$rbName = "\<Name of Runbook\>" \# Name of the runbook  
-$userId = Get-AzADUser -ObjectId "\<your email\>" \# Azure Active
-Directory (AAD) user's ObjectId from the directory
-
-\# Get the Automation account resource ID  
-$aa = Get-AzResource -ResourceGroupName $rgName -ResourceType
-"Microsoft.Automation/automationAccounts" -ResourceName
-$automationAccountName
-
-\# Get the Runbook resource ID  
-$rb = Get-AzResource -ResourceGroupName $rgName -ResourceType
-"Microsoft.Automation/automationAccounts/runbooks" -ResourceName
-"$rbName"
-
-\# The Automation Job Operator role only needs to be run once per user  
-New-AzRoleAssignment -ObjectId $userId -RoleDefinitionName "Automation
-Job Operator" -Scope $aa.ResourceId
-
-\# Adds the user to the Automation Runbook Operator role to the Runbook
-scope  
-New-AzRoleAssignment -ObjectId $userId.Id -RoleDefinitionName
-"Automation Runbook Operator" -Scope $rb.ResourceId
-
-A user with just individual runbooks granted runbook operator role, will
-see only these runbook(s) in the resource group and can start jobs as
-otherwise documented earlier.  
-Granting access to ONLY the runbooks and jobs shows under ‘all
-resources’ in Azure Portal, it will NOT show up in Azure Automation
-Accounts because access it granted ONLY to the runbooks and jobs within
-themselves.
-
-Below an example of exactly this – only runbooks granted access to a
-user and the actual Azure Automation Account
-
-![](Pictures/media/image75.png)
