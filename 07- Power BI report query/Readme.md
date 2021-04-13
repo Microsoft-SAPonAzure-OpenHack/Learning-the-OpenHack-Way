@@ -4,6 +4,8 @@
 - [Understand required Architecture and Azure components](#Understand-required-Architecture-and-Azure-components) 
 - [Get equipped with necessary skills and Knowledge](#Get-equipped-with-necessary-skills-and-Knowledge)
 - [Final Architecture](#Final-Architecture)
+- [Documentation URLs](#Documentation-URLs)
+- [Reference documents](# Reference-documents)
 
 
 **Description:**
@@ -77,14 +79,14 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 ![](media/GetImage.png)
  
 
-Documentation URL :  
+# Documentation URLs  
 
 [Use SAP HANA in Power BI - Power BI](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-sap-hana)
 
 [Power Query SAP HANA database connector](https://docs.microsoft.com/en-us/power-query/connectors/sap-hana/overview)
 
 
-Reference documents:
+# Reference documents
 
 [Direct Query in Power BI DirectQuery for SAP HANA in Power BI - Power BI](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-sap-hana)
 
