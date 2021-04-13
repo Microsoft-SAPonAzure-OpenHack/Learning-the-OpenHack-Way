@@ -1,8 +1,8 @@
 # Table of Contents 
 
 * [Finalize the description for challenge](#Finalize-the-description-for-challenge)
-* [Understand required Architecture, Azure components / Services](#Understand-required-Architecture-Azure-components-/-Services) 
-* [Get equipped with necessary skills / Knowledge](#Get-equipped-with-necessary-skills-/-Knowledge)
+* [Understand required Architecture, Azure components and Services](#Understand-required-Architecture-Azure-components-and-Services) 
+* [Get equipped with necessary skills and Knowledge](#Get-equipped-with-necessary-skills-and-Knowledge)
 * [Final Architecture](#Final-Architecture)
 
 
