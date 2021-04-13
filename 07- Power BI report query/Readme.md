@@ -3,7 +3,7 @@
 * [Finalize the description for challenge](#Finalize-the-description-for-challenge)
 * [Understand required Architecture, Azure components / Services](#Understand-required-Architecture-Azure components-Services) 
 * [Get equipped with necessary skills / Knowledge](#Get-equipped-with-necessary-skills-Knowledge)
-* [Finalize the Architecture](#Finalize-the-Architecture)
+* [Final Architecture](#Final-Architecture)
 
 
 **Description:**
@@ -14,7 +14,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**Finalize the description for challenge**
+# Finalize the description for challenge
 
  
 
@@ -32,7 +32,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**Understand required Architecture, Azure components / Services**
+# Understand required Architecture, Azure components / Services
 
  
 
@@ -58,7 +58,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**Get equipped with necessary skills / Knowledge** 
+# Get equipped with necessary skills / Knowledge 
 
  
 
@@ -78,7 +78,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-**Final Architecture** 
+# Final Architecture 
 
  
 ![](media/GetImage.png)
