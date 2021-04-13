@@ -30,8 +30,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-# Understand required Architecture, Azure components / Services
-
+# Understand required Architecture and Azure components
  
 
    * Download Power  BI  desktop from windows power app platfrom  
@@ -52,7 +51,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
- # Get equipped with necessary skills / Knowledge 
+ # Get equipped with necessary skills and Knowledge 
 
  
 
