@@ -1,4 +1,4 @@
-#Table of Contents
+# Table of Contents 
 
 * [Finalize the description for challenge](#Finalize-the-description-for-challenge)
 * [Understand required Architecture, Azure components / Services](#Understand-required-Architecture-Azure components-Services) 
