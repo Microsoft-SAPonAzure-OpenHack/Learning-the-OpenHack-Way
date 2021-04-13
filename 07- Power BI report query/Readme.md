@@ -78,45 +78,5 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
  
 
    
-5. **COMPLETE - Due Jan 30th - Build prototype and testing**
 
- 
-
-   * Building the prototype and respective testing: 
-
-   * Base Infra to support the challenge - VMs, ANF volumes, scale-out HANA 
-
-   * Download power BI desktop and configure 
-
-   * Create HANA DB schema and user , assign appropriate roles and privileges  to user to extract the data 
-
-   * Extract the data and start working filtering and value selection 
-
-   * Generate the Chart  
-
-   * Publish the Chart 
-
-6. **IN PROGRESS BUT AT RISK OF DELAY - Document the challenge and the step by step process**
-
- 
-
-   * Document the Challenge - Participant Guide (by 2/12) 
-
-   * Participant Documentation ( in progress)  
-
-   * Document the Challenge -  ( in progress )  
-
-7. **PLANNED -Test documented process**
-
- 
-8. **PLANNED -Internal dry run with in Team and identify any gaps**
-
-9. **PLANNED -Update documentation based on leanings**
-10. **PLANNED -Dry run with CSA community**
-
-11. **PLANNED -If there are any lessons, update documentation**
-
-12. **PLANNED -Ready to conduct OpenHack at the customer**
-
-13. **Other**
 
