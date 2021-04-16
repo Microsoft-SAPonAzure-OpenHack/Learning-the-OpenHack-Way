@@ -1,7 +1,7 @@
 # Table of Contents 
 
 
-Introduction 
+# Introduction 
 
  
 
@@ -9,7 +9,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-Description 
+# Description 
 
  
 
@@ -25,7 +25,7 @@ Description
 
  
 
-Hints 
+# Hints 
  
 
    * Download Power  BI  desktop from windows power app platfrom  
@@ -46,7 +46,7 @@ Hints
 
  
 
- # Guielines 
+ # Guiedelines 
 
  
 
