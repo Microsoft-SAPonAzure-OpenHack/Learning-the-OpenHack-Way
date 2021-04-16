@@ -1,13 +1,7 @@
 # Table of Contents 
 
-- [Finalize the description for challenge](#Finalize-the-description-for-challenge)
-- [Understand required Architecture and Azure components](#Understand-required-Architecture-and-Azure-components) 
-- [Get equipped with necessary skills and Knowledge](#Get-equipped-with-necessary-skills-and-Knowledge)
-- [Final Architecture](#Final-Architecture)
-- [Documentation URLs](#Documentation-URLs)
-- [Reference documents](#Reference-documents)
 
- Instroduction 
+Introduction 
 
  
 
@@ -31,7 +25,7 @@ Description
 
  
 
-# Understand required Architecture and Azure components
+Hints 
  
 
    * Download Power  BI  desktop from windows power app platfrom  
@@ -52,7 +46,7 @@ Description
 
  
 
- # Get equipped with necessary skills and Knowledge 
+ # Guielines 
 
  
 
