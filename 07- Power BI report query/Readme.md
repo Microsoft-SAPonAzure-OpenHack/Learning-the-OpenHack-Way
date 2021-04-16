@@ -7,8 +7,7 @@
 - [Documentation URLs](#Documentation-URLs)
 - [Reference documents](#Reference-documents)
 
-
-**Description:**
+ Instroduction 
 
  
 
@@ -16,7 +15,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-# Finalize the description for challenge
+Description 
 
  
 
