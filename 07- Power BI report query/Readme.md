@@ -4,8 +4,7 @@
 # Introduction 
 
  
-
-Generate self-service sales report from SAP system. Option 1: Extract sales data from SAP system to ADLS and generate analytics  report using power BI /Synapse. Option 2:  Generate self-service sales report using direct query to SAP  HANA system. 
+Mango Inc is a manufacturing company planning to modernize IT infrastructure. As a part of that efforts, they want to Generate self-service report from SAP HANA DB tables using Microsoft power BI desktop clients and apps for visualization and analysis purpose. This exercise includes connecting power BI desktop client to HANA DB using direct query with DB user and password, Extract the required tables using semantic SQL query and Generate self-service Job status report using direct custom query to SAP system.
 
  
 
@@ -15,8 +14,6 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
    Generate self-service SAP system  report about batch jobs status and  name from SAP system. 
 
- 
-
    * Download Power BI client and connect SAP HANA DB using Power BI configuration option. 
 
    * Extract  table TBTCO ( SAP job status ) using SQL and   Generate self-service Job status report  using direct custom query to SAP system. 
@@ -25,30 +22,28 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
  
 
-# Hints 
+# Success Criteria 
  
 
-   * Download Power  BI  desktop from windows power app platfrom  
+   * Taks1: Download Power  BI  desktop from windows power app platfrom  
 
-   * Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
+   * Taks2: Execute the install and make sure that you have network connectivity from Jump box to SAP HANA DB and required HANA DB ports are open. ( no firewall issues etc..) 
 
-   * For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
+   * Taks3: For the HANA DB create the SCHEMA user with admin rights on SAP SCHEMA and assign appropriate roles and privileges to extract the data. 
 
-   * Open the BI desktop client and execute the connection configure for SAP HANA database. 
+   * Taks4: Open the BI desktop client and execute the connection configure for SAP HANA database. 
 
-   * Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
+   * Taks5: Enter the Server IP address , select ports  (custom ) and port  for the  HANA system ID  ( for example SAP HANA system ID NN ports will be 3NN40-3NN99) 
 
-   * Select Appropriate user name,  password and SSL encryption - none 
+   * Task6:  Select Appropriate user name,  password and SSL encryption - none 
 
-   * Select direct query for data connectivity Mode  
+   * Taks7: Select direct query for data connectivity Mode  
 
-   * Extract the data and see the  tabular from of the DB 
-
- 
-
- # Guidelines 
+   * Taks8: Extract the data and see the  tabular from of the DB 
 
  
+
+ # Skills, guidelines and helpful hints
 
    * Target Roles: DBA, BASIS and Technical Architect 
 
@@ -60,11 +55,7 @@ Generate self-service sales report from SAP system. Option 1: Extract sales data
 
    * Other tools - perf. benchmark tools, snapshot validation tools, Portal, CLI, bash scripting, Linux Administration 
 
- 
-
- 
-
- 
+  
 
 # Final Architecture 
 
